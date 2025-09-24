@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/employees")
 // allow Vite and CRA (frontend) to access this API
-@CrossOrigin(origins = "http://localhost:5173") // adjust port if your React runs on different port
+@CrossOrigin(origins = "http://localhost:2030") // adjust port if your React runs on different port
 public class EmployeeController {
 
     @Autowired
