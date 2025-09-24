@@ -53,7 +53,7 @@
 	</dependencies>
 
 	<build>
-	<finalName>samplebootbookapi</finalName>
+	<finalName>sampleemployeeapi</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

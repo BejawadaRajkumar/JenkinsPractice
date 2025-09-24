@@ -1,14 +1,14 @@
-package com.example.bookslibrary;
+package com.example.employeemanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class BookslibraryApplication extends SpringBootServletInitializer {
+public class EmployeeApplication extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BookslibraryApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(EmployeeApplication.class, args);
+    }
 
 }
