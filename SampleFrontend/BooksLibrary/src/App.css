@@ -44,26 +44,41 @@ h2 {
    Form
 =========================== */
 .form {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr auto auto;
+  display: flex;
+  flex-direction: row;
   gap: 12px;
   margin-bottom: 25px;
   align-items: center;
 }
 
+.form-vertical {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .form input[type="text"],
 .form input[type="number"],
 .form input[type="email"] {
-  padding: 12px;
+  padding: 14px 16px;       /* bigger padding */
   border: 1px solid #ccd6dd;
   border-radius: 10px;
-  font-size: 0.95rem;
+  font-size: 1rem;          /* slightly bigger font */
   background: #f9fbfd;
   transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%;              /* take full width of form-group */
+  max-width: 500px;         /* don’t stretch too wide */
+  box-sizing: border-box;
 }
 
+
 .form input:focus {
-  border-color: #4a90e2;
+  border-color: #4ae266;
   box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
   outline: none;
 }
@@ -85,7 +100,7 @@ h2 {
 
 .form button {
   padding: 12px 18px;
-  background: #4a90e2;
+  background: #4ae266;
   color: white;
   font-weight: 600;
   border: none;
@@ -95,7 +110,7 @@ h2 {
 }
 
 .form button:hover {
-  background: #357ab8;
+  background: #b83535;
   transform: translateY(-2px);
 }
 
@@ -109,7 +124,7 @@ table {
 }
 
 thead {
-  background: #4a90e2;
+  background: #4ae266;
   color: white;
 }
 

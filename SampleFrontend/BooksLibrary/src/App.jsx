@@ -91,34 +91,44 @@ function App() {
     <div className="container">
       <h1>Employee Management</h1>
 
-      <div className="form">
-        <input
-          placeholder="Employee Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          placeholder="Department"
-          value={department}
-          onChange={(e) => setDepartment(e.target.value)}
-        />
-        <input
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label>
+      <form className="form form-vertical" onSubmit={e => {e.preventDefault(); addEmployee();}}>
+        <div className="form-group">
           <input
-            type="checkbox"
-            checked={active}
-            onChange={(e) => setActive(e.target.checked)}
+            placeholder="Employee Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
-          Active
-        </label>
-        <button onClick={addEmployee} disabled={loading || !name || !department || !email}>
-          {loading ? "Processing..." : "Add Employee"}
-        </button>
-      </div>
+        </div>
+        <div className="form-group">
+          <input
+            placeholder="Department"
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>
+            <input
+              type="checkbox"
+              checked={active}
+              onChange={(e) => setActive(e.target.checked)}
+            />
+            Active
+          </label>
+        </div>
+        <div className="form-group">
+          <button type="submit" disabled={loading || !name || !department || !email}>
+            {loading ? "Processing..." : "Add Employee"}
+          </button>
+        </div>
+      </form>
 
       <div>
         <h2>All Employees</h2>
